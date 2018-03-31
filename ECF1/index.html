@@ -1,30 +1,16 @@
-<?php
-require 'db.php';
-?>
-
 <!DOCTYPE html>
 <html>
 
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Hanh Maisenti JSvalidator</title>
+    <title>ECF1</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" media="screen" href="../css/main.css?v=<?=time();?>" /> <!--Chrome Refresh is TERRIBLE. Remove for production -->
+    <link rel="stylesheet" type="text/css" media="screen" href="../css/main.css" /> 
     <script src="../jscript/main.js"></script>
 </head>
-
-<?php
-if ($_SERVER['REQUEST_METHOD'] == 'POST') { //this triggers when the submit action is triggered
-    //javascript returns true here. form already validated, very simple
-    if (isset($_POST['savetodb'])) {
-        require 'submitdata.php'; //extension php to submit the form submission data to sql database
-    }
-}
-?>
-
 <body>
-    <h1>ECF2</h1>    
+    <h1>ECF1</h1>
     <h2>Traveller Flight Preferences</h2>
     <form name="jsvalidator" action="ECF.php" onsubmit="return validateForm()" method="POST">
 
@@ -81,9 +67,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') { //this triggers when the submit acti
         <div class="container">
             <button type="submit" name="savetodb">Save Preferences</button>
         </div>
-    </form>
-    <form action="viewdata.php">
-        <input type="submit" value="View Everyones Preferences" />
     </form>
 </body>
 </html>
