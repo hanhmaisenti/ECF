@@ -1,0 +1,46 @@
+to create the SQL database structure, simply copy the following text into PHPmyAdmin SQL part and run it
+This routine is simple. Its a simple traveller flight preferrences tracking system
+You enter the (email, firstname, lastname, Flight) - All of these javascript validated
+you then select your preferrences
+and save
+
+You can observe everyones preferences in the View Everyones Preferences report area
+
+IF you want to change anything, simply retype the email(important) fname, lname, and Flight (important)
+it will search for and update that users preferences.
+
+DONT FORGET: Update your password in DB.PHP
+============================================================================
+
+CREATE DATABASE ECF;
+
+CREATE TABLE `desserts` (
+  `intid` int(11) NOT NULL,
+  `id` int(11) NOT NULL,
+  `dessert` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+CREATE TABLE `people` (
+  `id` int(11) NOT NULL,
+  `flight` text NOT NULL,
+  `email` text NOT NULL,
+  `fname` text NOT NULL,
+  `lname` text NOT NULL,
+  `starter` text NOT NULL,
+  `maincourse` text NOT NULL,
+  `rating` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+ALTER TABLE `desserts`
+  ADD PRIMARY KEY (`intid`);
+
+ALTER TABLE `people`
+  ADD PRIMARY KEY (`id`);
+
+ALTER TABLE `desserts`
+  MODIFY `intid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=60;
+
+ALTER TABLE `people`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
+
+============================================================================

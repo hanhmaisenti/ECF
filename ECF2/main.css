@@ -1,0 +1,150 @@
+.container {
+    width: 30%;
+    padding-top: 5px;
+    padding-right: 10px;
+    padding-bottom: 15px;
+    padding-left: 10px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+
+.c_green {
+    background-color: lightseagreen;
+}
+
+.c_grey {
+    background-color: lightgrey;
+}
+
+.c_gold {
+    background-color: goldenrod;
+}
+
+.c_pink {
+    background-color: lightpink;
+}
+
+
+/* Table */
+
+.data-table {
+    border-collapse: collapse;
+    font-size: 14px;
+    min-width: 537px;
+}
+
+.data-table th,
+.data-table td {
+    border: 1px solid #e1edff;
+    padding: 7px 17px;
+}
+
+
+/* Table Header */
+
+.data-table thead th {
+    background-color: #508abb;
+    color: #FFFFFF;
+    border-color: #6ea1cc !important;
+    text-transform: uppercase;
+}
+
+
+/* Table Body */
+
+.data-table tbody td {
+    color: #353535;
+}
+
+.data-table tbody td:first-child,
+.data-table tbody td:nth-child(4),
+.data-table tbody td:last-child {
+    text-align: right;
+}
+
+.data-table tbody tr:nth-child(odd) td {
+    background-color: #f4fbff;
+}
+
+body {
+    margin: 40px;
+  }
+
+  .sidebar {
+    grid-area: sidebar;
+  }
+
+  .sidebar2 {
+    grid-area: sidebar2;
+  }
+
+  .content {
+    grid-area: content;
+  }
+
+  .header {
+    grid-area: header;
+  }
+
+  .footer {
+    grid-area: footer;
+  }
+
+  .wrapper {
+    background-color: #fff;
+    color: #444;
+  }
+
+  .wrapper {
+    display: grid;
+    grid-gap: 1em;
+    grid-template-areas: "header" "sidebar" "content" "sidebar2" "footer"
+  }
+
+  @media only screen and (min-width: 500px) {
+    .wrapper {
+
+      grid-template-columns: 20% auto;
+      grid-template-areas: "header   header" "sidebar  content" "sidebar2 sidebar2" "footer   footer";
+    }
+  }
+
+  @media only screen and (min-width: 600px) {
+    .wrapper {
+      grid-gap: 20px;
+      grid-template-columns: 1fr 3fr 1fr;
+      grid-template-areas: "header  header  header" "sidebar content sidebar2" "footer  footer  footer";
+      max-width: 100%;
+
+    }
+
+    .box {
+      background-color: rgb(100, 122, 92);
+      color: #fff;
+      border-radius: 5px;
+      padding: 10px;
+      font-size: 150%;
+    }
+
+    /* .header,
+  .footer {
+    background-color: #f3f3f5e7;
+    color: darkblue
+  }
+*/
+    .sidebar2 {
+      background-color: #ccc;
+      color: #444;
+    }
+
+    .content p {
+      font-size: small;
+      text-align: center;
+      letter-spacing: 1px;
+    }
+    .bollox {
+      border-color:black;
+      padding: 10px;
+      background-color: aquamarine;
+      border-radius: 20px;
+    }
