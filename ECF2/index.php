@@ -26,7 +26,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') { //this triggers when the submit acti
 <body>
     <h1>ECF2</h1>    
     <h2>Traveller Flight Preferences</h2>
-    <form name="jsvalidator" action="ECF.php" onsubmit="return validateForm()" method="POST">
+    <form name="jsvalidator" action="index.php" onsubmit="return validateForm()" method="POST">
 
         <div class="container c_green">
             <h3>Please enter your Email Address</h3><input type="text" name="email" value=""><br>
